@@ -28,10 +28,10 @@ def check_upcoming_birthdays(prepared_users, days=7):
     today = datetime.today().date() 
     upcoming_birthdays = []
     for user in prepared_users:
-        birthday_this_year = user["birthday"].replace(year=today.year)
+        birthday_this_year = datetime(today.year, user["birthday"].month, user["birthday"].day).date()
 
         if birthday_this_year < today: 
-            birthday_this_year = birthday_this_year.replace(year=today.year + 1)
+            birthday_this_year = datetime(today.year + 1, user["birthday"].month, user["birthday"].day).date()
 
         if 0 <= (birthday_this_year - today).days <= days:
             if birthday_this_year.weekday() >= 5:
