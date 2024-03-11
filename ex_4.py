@@ -46,10 +46,3 @@ upcoming_birthdays_result = get_upcoming_birthdays(users)
 print(upcoming_birthdays_result)
 
 
-
-prepared_users_list = prepared_users(users)
-upcoming_birthdays_result = get_upcoming_birthdays(prepared_users_list)
-print(upcoming_birthdays_result)
-
-
-
