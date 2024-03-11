@@ -24,7 +24,7 @@ def prepared_users(users):
             print(f'Некоректна дата народження для користувача {user["name"]}')
     return prepared_users
 
-def check_upcoming_birthdays(prepared_users, days=7):   
+def get_upcoming_birthdays(prepared_users, days=7):   
     today = datetime.today().date() 
     upcoming_birthdays = []
     for user in prepared_users:
@@ -47,7 +47,7 @@ def check_upcoming_birthdays(prepared_users, days=7):
 
 
 prepared_users_list = prepared_users(users)
-upcoming_birthdays_result = check_upcoming_birthdays(prepared_users_list)
+upcoming_birthdays_result = get_upcoming_birthdays(prepared_users_list)
 print(upcoming_birthdays_result)
 
 
